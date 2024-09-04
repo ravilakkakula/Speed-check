@@ -1,5 +1,7 @@
-Speed Check Project
-Overview
+# Speed Check Project
+
+Overview:
+
 The Speed Check Project is an automated system designed to monitor and enforce speed limits on highways without requiring police surveillance. The project consists of two main components:
 
 Data Collection Points: The system includes two data collection points placed along a highway. These points record the information of vehicles as they pass through. The information collected includes the vehicle’s unique identifier and the timestamp of the data collection.
