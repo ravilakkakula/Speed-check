@@ -1,37 +1,18 @@
-# Busted! Create an ML-Powered Speed Trap
+Speed Check Project
+Overview
+The Speed Check Project is an automated system designed to monitor and enforce speed limits on highways without requiring police surveillance. The project consists of two main components:
 
-In this project, I built a portable speed trap that can be used to monitor
-traffic speed conditions in your neighborhood. By using an ML model to identify
-vehicles, a doppler radar sensor to detect speed, and a
-[cellular module](https://blues.io/?utm_source=github&utm_medium=web&utm_campaign=featured-project&utm_content=speedtrap)
-to relay collected data to the cloud, it was surprisingly easy to build out this
-IoT solution!
+Data Collection Points: The system includes two data collection points placed along a highway. These points record the information of vehicles as they pass through. The information collected includes the vehicle’s unique identifier and the timestamp of the data collection.
 
-> Watch an [intro video](https://youtu.be/IpvHeAGUA7I) and then view the
-> complete tutorial over at [Hackster.io](https://bit.ly/pi-speedtrap)!
+Speed Calculation and Ticket Issuance: At the second collection point, the system calculates the average speed of the vehicle by comparing the time and distance between the two points. If the calculated average speed exceeds the predefined speed limit, the system automatically generates a speeding ticket for the vehicle owner. This process eliminates the need for manual police intervention and ensures consistent enforcement of speed regulations.
 
-![field deployment](speed-trap-final.jpg)
-
-_Field deployment_ 👆
-
-![ubidots dashboard](ubidots-dashboard.png)
-
-_Ubidots dashboard_ 👆
-
-**Hardware:**
-
-- [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
-- [Notecard and Notecarrier-PI HAT](https://blues.io/products/?utm_source=github&utm_medium=web&utm_campaign=featured-project&utm_content=speedtrap)
-  from Blues Wireless
-- [PiCamera v2](https://www.raspberrypi.org/products/camera-module-v2/)
-- [OPS243-A Doppler Radar Sensor](https://omnipresense.com/product/ops243-doppler-radar-sensor/)
-- [Adafruit Seven-segment Display](https://www.adafruit.com/product/879)
-- [30000mAh Power Bank](https://smile.amazon.com/gp/product/B07H5T9J4L/ref=ppx_yo_dt_b_asin_title_o02_s02?ie=UTF8&psc=1)
-- [Enclosure](https://smile.amazon.com/gp/product/B07NSTRJN7/ref=ppx_yo_dt_b_asin_title_o02_s02?ie=UTF8&psc=1)
-
-**Software and Services:**
-
-- [Python](https://www.python.org/)
-- [Notehub.io](https://blues.io/services/?utm_source=github&utm_medium=web&utm_campaign=featured-project&utm_content=speedtrap)
-- [Edge Impulse](https://www.edgeimpulse.com/)
-- [Ubidots](https://ubidots.com/)
+Features
+Automated Data Collection: Efficiently gathers vehicle information at two separate points along a highway.
+Speed Calculation: Computes the average speed of a vehicle based on time and distance between the collection points.
+Speed Limit Enforcement: Automatically issues a speeding ticket if the vehicle’s average speed exceeds the set speed limit.
+No Police Intervention Required: Operates independently of police presence, streamlining speed enforcement on highways.
+How It Works
+First Collection Point: Records vehicle information and timestamp as it passes through.
+Second Collection Point: Captures the vehicle information and timestamp again.
+Speed Computation: Calculates the average speed of the vehicle using the timestamps and distance between the two points.
+Ticket Generation: Compares the average speed with the speed limit. If the limit is exceeded, an automatic ticket is issued to the vehicle owner.
